@@ -229,10 +229,10 @@ function cariLokasi(tipe) {
 }
 
 function perbaruiDaftarTarifArmada(jarakKm) {
-    waktuGlobalMenit = jarakKm * 4;
+    waktuGlobalMenit = jarakKm * 1;
     const durasiWaktuTeks = (waktuGlobalMenit >= 60) ? `${Math.floor(waktuGlobalMenit / 60)} jam ${waktuGlobalMenit % 60} mnt` : `${waktuGlobalMenit} menit`;
     
-    const tarifPickup = 100000 + (jarakKm * 5000); const tarifBox = 150000 + (jarakKm * 7000); const tarifTruk = 300000 + (jarakKm * 15000);
+    const tarifPickup = 22000 + (jarakKm * 3000); const tarifBox = 28000 + (jarakKm * 5000); const tarifTruk = 33000 + (jarakKm * 7000);
 
     document.getElementById('tarif-pickup').innerText = formatRupiah(tarifPickup); document.getElementById('waktu-pickup').innerText = durasiWaktuTeks;
     document.getElementById('tarif-box').innerText = formatRupiah(tarifBox); document.getElementById('waktu-box').innerText = durasiWaktuTeks;
